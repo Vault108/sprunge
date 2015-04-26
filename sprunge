@@ -1,0 +1,6 @@
+#!/bin/bash
+# this posts whatever you pipe to it directly to sprunge
+# and then copy the resulting link to your clipboard using xclip
+curl -F "sprunge=<-" http://sprunge.us|tee /tmp/sprungelink
+cat /tmp/sprungelink | xclip -i  -selection clipboard
+rm /tmp/sprungelink
