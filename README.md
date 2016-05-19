@@ -20,3 +20,13 @@ $ cat /var/log/Xorg.0.log|sprunge
 100 40230    0    23  100 40207     21  37461  0:00:01  0:00:01 --:--:-- 37436
 http://sprunge.us/$OUTPUT_URL
 ```
+
+### Install
+
+Just copy sprunge to your path like `/usr/local/bin` or similar
+
+
+oneliner:
+```
+curl https://raw.githubusercontent.com/joshuacox/sprunge/master/install.sh |bash
+```
