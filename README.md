@@ -28,5 +28,5 @@ Just copy sprunge to your path like `/usr/local/bin` or similar
 
 oneliner:
 ```
-curl https://raw.githubusercontent.com/joshuacox/sprunge/master/install.sh |bash
+curl -s https://raw.githubusercontent.com/joshuacox/sprunge/master/install.sh |bash
 ```
