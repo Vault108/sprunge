@@ -1,11 +1,6 @@
 #!/bin/bash
 # this posts whatever you pipe to it directly to sprunge
 # and then copy the resulting link to your clipboard using xclip
-SPRUNGELINK=$(mktemp --suffix='-SprungeLink')
-curl -F "sprunge=<-" http://sprunge.us|tee $SPRUNGELINK
-cat $SPRUNGELINK | xclip -i  -selection clipboard
-# rm is optional here
-# I like to comment it out on my machine
-# then I can reference it again later
-# but I think the public version should be tidy
-rm $SPRUNGELINK
+SPRUNGELINK=$(curl -sF "sprunge=<-" http://sprunge.us)
+echo $SPRUNGELINK | xclip -i  -selection clipboard
+echo $SPRUNGELINK
